@@ -49,4 +49,3 @@ make
 
 Compliant ST SRx tags have some blocks that, once changed,cannot be changed back to their original value.Example Counters Blocks 5 and 6. 
 Before writing a tag, make sure you're aware of this.
-# nfc-srix-programmer
