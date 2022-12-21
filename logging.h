@@ -31,6 +31,15 @@
 
 extern bool verbose_status;
 extern int verbosity_level;
+
+extern uint32_t eeprom_size;
+extern uint32_t eeprom_blocks_amount;
+extern bool skip_confirmation;
+
+void set_eeprom_size(uint32_t);
+void set_eeprom_blocks_amount(uint32_t);
+void set_skip_confirmation(bool);
+
 void set_verbose(bool);
 void set_verbosity(int);
 int lverbose(const char * restrict, ...);

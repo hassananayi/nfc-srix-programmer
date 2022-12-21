@@ -33,12 +33,16 @@ make
 <img src="screenshots/read_eeprom_content.png" alt="Read EEPROM Content" style="height: 300px;"/>
 <img src="screenshots/read_tag_info.png" alt="Read EEPROM Content" style="height: 300px;"/>
 
-## Config file
+## Config
 
-* `tag_type=x4k;`          [x4k|512]     Select SRIX4K or SRI512 tag type        [default: x4k]
-* `print_columns=1;`       [1|2]         erint on one or two columns             [default: 1]
-* `verbose=off;`           [on|off]      Enable verbose - print debugging data   [default: off]
-* `skip_confirmation=off;` [on|off]      Skip All confirmation input             [default: off]
+```text
+Usage: ./nfc-srix [-v] [-y] [-t x4k|512]
+
+Options:
+  -v           enable verbose - print debugging data
+  -y           nswer YES to all questions
+  -t x4k|512   select SRIX4K or SRI512 tag type [default: x4k]
+```
 
 ## Supported tags
 
@@ -49,3 +53,4 @@ make
 
 Compliant ST SRx tags have some blocks that, once changed,cannot be changed back to their original value.Example Counters Blocks 5 and 6. 
 Before writing a tag, make sure you're aware of this.
+

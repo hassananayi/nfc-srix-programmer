@@ -17,10 +17,26 @@
 #include <stdio.h>
 #include <stdarg.h>
 #include <stdbool.h>
+#include <stdint.h>
 #include "logging.h"
 
 bool verbose_status = false;
 int verbosity_level = 0;
+
+uint32_t eeprom_size = 512;
+uint32_t eeprom_blocks_amount = 128;
+bool skip_confirmation = false;
+
+
+void set_eeprom_size(uint32_t eeprom_size_value) {
+    eeprom_size = eeprom_size_value;
+}
+void set_eeprom_blocks_amount(uint32_t eeprom_blocks_value) {
+    eeprom_blocks_amount = eeprom_blocks_value;
+}
+void set_skip_confirmation(bool value){
+   skip_confirmation = value;
+}
 
 void set_verbose(bool setting) {
     verbose_status = setting;
